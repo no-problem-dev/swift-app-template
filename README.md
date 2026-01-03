@@ -48,7 +48,7 @@ FIREBASE_PROJECT_ID=your-project-id
 
 ```bash
 make setup
-open AppTemplate.xcworkspace
+open MyApp.xcworkspace  # APP_NAMEで指定した名前
 ```
 
 ## 開発

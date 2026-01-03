@@ -8,7 +8,7 @@ PLIST_PATH="$IOS_DIR/App/GoogleService-Info.plist"
 PROJECT_YML="$IOS_DIR/project.yml"
 CONFIG_FILE="$PROJECT_ROOT/setup.config"
 
-echo "🔧 Generating project.yml..."
+echo "🔧 Generating project..."
 
 # setup.config の存在確認
 if [ ! -f "$CONFIG_FILE" ]; then
@@ -50,12 +50,13 @@ if [ -z "$REVERSED_CLIENT_ID" ]; then
 fi
 
 echo "  ✅ Config: $APP_NAME ($BUNDLE_ID)"
-echo "  ✅ Found REVERSED_CLIENT_ID"
 
 # デフォルト値設定
 APP_DISPLAY_NAME="${APP_DISPLAY_NAME:-$APP_NAME}"
 BUNDLE_ID_PREFIX="${BUNDLE_ID_PREFIX:-com.example}"
 DEVELOPMENT_TEAM="${DEVELOPMENT_TEAM:-}"
+PRIVACY_POLICY_URL="${PRIVACY_POLICY_URL:-https://example.com/privacy}"
+TERMS_OF_SERVICE_URL="${TERMS_OF_SERVICE_URL:-https://example.com/terms}"
 
 # project.yml を生成
 cat > "$PROJECT_YML" << EOF
@@ -126,10 +127,56 @@ EOF
 
 echo "  ✅ Generated project.yml"
 
+# Swiftファイルのプレースホルダー置換
+echo "  🔄 Updating source files..."
+
+# AppTemplateApp.swift → {APP_NAME}App.swift
+APP_ENTRY="$IOS_DIR/App/Sources/AppTemplateApp.swift"
+if [ -f "$APP_ENTRY" ]; then
+    sed -i '' "s/AppTemplateApp/${APP_NAME}App/g" "$APP_ENTRY"
+    mv "$APP_ENTRY" "$IOS_DIR/App/Sources/${APP_NAME}App.swift"
+fi
+
+# AppTheme.swift
+THEME_FILE="$IOS_DIR/Packages/Presentation/Sources/Presentation/Theme/AppTheme.swift"
+if [ -f "$THEME_FILE" ]; then
+    sed -i '' "s/App Template/$APP_DISPLAY_NAME/g" "$THEME_FILE"
+fi
+
+# SignInView.swift
+SIGNIN_FILE="$IOS_DIR/Packages/Presentation/Sources/Presentation/Views/Authentication/SignInView.swift"
+if [ -f "$SIGNIN_FILE" ]; then
+    sed -i '' "s/App Template/$APP_DISPLAY_NAME/g" "$SIGNIN_FILE"
+    sed -i '' "s|https://example.com/terms|$TERMS_OF_SERVICE_URL|g" "$SIGNIN_FILE"
+    sed -i '' "s|https://example.com/privacy|$PRIVACY_POLICY_URL|g" "$SIGNIN_FILE"
+fi
+
+# SettingsView.swift
+SETTINGS_FILE="$IOS_DIR/Packages/Presentation/Sources/Presentation/Views/Home/SettingsView.swift"
+if [ -f "$SETTINGS_FILE" ]; then
+    sed -i '' "s|https://example.com/terms|$TERMS_OF_SERVICE_URL|g" "$SETTINGS_FILE"
+    sed -i '' "s|https://example.com/privacy|$PRIVACY_POLICY_URL|g" "$SETTINGS_FILE"
+fi
+
+# Workspace名を変更
+OLD_WORKSPACE="$PROJECT_ROOT/AppTemplate.xcworkspace"
+NEW_WORKSPACE="$PROJECT_ROOT/${APP_NAME}.xcworkspace"
+if [ -d "$OLD_WORKSPACE" ] && [ "$OLD_WORKSPACE" != "$NEW_WORKSPACE" ]; then
+    mv "$OLD_WORKSPACE" "$NEW_WORKSPACE"
+fi
+
+# CLAUDE.md
+CLAUDE_FILE="$PROJECT_ROOT/CLAUDE.md"
+if [ -f "$CLAUDE_FILE" ]; then
+    sed -i '' "s/# App Template/# $APP_NAME/g" "$CLAUDE_FILE"
+fi
+
+echo "  ✅ Updated source files"
+
 # xcodegen を実行
 echo "📱 Running xcodegen..."
 cd "$IOS_DIR" && xcodegen generate
 
 echo ""
 echo "🎉 Setup complete!"
-echo "   Open AppTemplate.xcworkspace in Xcode"
+echo "   open ${APP_NAME}.xcworkspace"

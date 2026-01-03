@@ -25,9 +25,9 @@ DerivedData/
 iOS/App.xcodeproj/
 iOS/project.yml
 
-# Workspace (except root workspace)
-*.xcworkspace
-!AppTemplate.xcworkspace
+# Workspace internals
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
 
 # CocoaPods
 Pods/
