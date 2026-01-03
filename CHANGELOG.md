@@ -23,3 +23,6 @@
 - 共有ドメインモデル（Shared パッケージ）
 - Makefile による開発コマンド
 - Docker / Cloud Run デプロイ設定
+
+[未リリース]: https://github.com/no-problem-dev/swift-app-template/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/no-problem-dev/swift-app-template/releases/tag/v1.0.0
