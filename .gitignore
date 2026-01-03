@@ -48,6 +48,7 @@ GoogleService-Info.plist
 .env
 .env.local
 .env.*.local
+setup.config
 
 # Node.js / Firebase
 node_modules/

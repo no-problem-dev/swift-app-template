@@ -13,43 +13,41 @@ iOS + Swift Backend のフルスタックテンプレート。Clean Architecture
 
 ### 1. テンプレートからリポジトリ作成
 
-GitHub で "Use this template" ボタンをクリック、または:
-
 ```bash
 gh repo create my-app --template no-problem-dev/swift-app-template --clone
 cd my-app
 ```
 
-### 2. Firebase プロジェクトの設定
+### 2. 設定ファイルの編集
 
-1. [Firebase Console](https://console.firebase.google.com/) でプロジェクトを作成
+```bash
+make setup  # setup.config と .env を生成
+```
+
+`setup.config` を編集:
+```bash
+APP_NAME=MyApp
+APP_DISPLAY_NAME=My App
+BUNDLE_ID_PREFIX=com.mycompany
+BUNDLE_ID=com.mycompany.myapp
+DEVELOPMENT_TEAM=XXXXXXXXXX
+```
+
+`.env` を編集:
+```bash
+FIREBASE_PROJECT_ID=your-project-id
+```
+
+### 3. Firebase 設定
+
+1. [Firebase Console](https://console.firebase.google.com/) でプロジェクト作成
 2. iOS アプリを追加
-3. `GoogleService-Info.plist` をダウンロードして `iOS/App/` に配置
-4. Authentication で Apple / Google サインインを有効化
-5. Firestore Database を作成
+3. `GoogleService-Info.plist` を `iOS/App/` に配置
 
-### 3. プロジェクト生成
+### 4. プロジェクト生成
 
 ```bash
 make setup
-```
-
-このコマンドで自動実行:
-- `.env` ファイル作成
-- `GoogleService-Info.plist` から URL スキーム読み取り
-- `project.yml` 生成
-- Xcode プロジェクト生成
-
-### 4. 環境変数の設定
-
-```bash
-# .env を編集して FIREBASE_PROJECT_ID を設定
-vim .env
-```
-
-### 5. ワークスペースを開く
-
-```bash
 open AppTemplate.xcworkspace
 ```
 

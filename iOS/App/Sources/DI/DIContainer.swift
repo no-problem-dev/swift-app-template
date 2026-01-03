@@ -44,13 +44,9 @@ enum AppEnvironment {
     var apiBaseURL: String {
         switch self {
         case .development:
-            if let envURL = ProcessInfo.processInfo.environment["API_BASE_URL"] {
-                return envURL
-            }
-            return "http://localhost:8080"
+            return ProcessInfo.processInfo.environment["API_BASE_URL"] ?? "http://localhost:8080"
         case .production:
-            // TODO: Replace with your production URL
-            return "https://api.example.com"
+            return ProcessInfo.processInfo.environment["API_BASE_URL"] ?? "https://api.example.com"
         }
     }
 }

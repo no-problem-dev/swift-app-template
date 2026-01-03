@@ -176,6 +176,16 @@ setup:
 	else \
 		echo "ℹ️  .env already exists"; \
 	fi
+	@if [ ! -f setup.config ]; then \
+		cp setup.config.example setup.config; \
+		echo "✅ Created setup.config from setup.config.example"; \
+		echo ""; \
+		echo "📋 Next steps:"; \
+		echo "   1. Edit setup.config with your app settings"; \
+		echo "   2. Place GoogleService-Info.plist in iOS/App/"; \
+		echo "   3. Run: make setup"; \
+		exit 0; \
+	fi
 	@echo ""
 	@if [ ! -f iOS/App/GoogleService-Info.plist ]; then \
 		echo "⚠️  GoogleService-Info.plist not found"; \
@@ -183,7 +193,7 @@ setup:
 		echo "📋 Next steps:"; \
 		echo "   1. Download GoogleService-Info.plist from Firebase Console"; \
 		echo "   2. Place it in iOS/App/GoogleService-Info.plist"; \
-		echo "   3. Run: make xcode-generate"; \
+		echo "   3. Run: make setup"; \
 	else \
 		$(MAKE) xcode-generate; \
 	fi
