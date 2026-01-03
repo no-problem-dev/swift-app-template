@@ -1,9 +1,6 @@
 # App Configuration
 APP_NAME=MyApp
-APP_DISPLAY_NAME=My App
+APP_DISPLAY_NAME="My App"
 BUNDLE_ID_PREFIX=com.example
 BUNDLE_ID=com.example.myapp
 DEVELOPMENT_TEAM=
-
-# API Configuration
-API_BASE_URL=https://api.example.com

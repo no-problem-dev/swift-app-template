@@ -59,7 +59,7 @@ DEVELOPMENT_TEAM="${DEVELOPMENT_TEAM:-}"
 
 # project.yml を生成
 cat > "$PROJECT_YML" << EOF
-name: $APP_NAME
+name: App
 options:
   bundleIdPrefix: $BUNDLE_ID_PREFIX
   deploymentTarget:
@@ -79,7 +79,7 @@ packages:
     path: Packages/UseCases
 
 targets:
-  $APP_NAME:
+  App:
     type: application
     platform: iOS
     sources:
