@@ -1,41 +1,32 @@
-## Summary
+## 概要
 
-Brief description of changes.
+変更内容の簡潔な説明。
 
-## Type of Change
+## 変更種別
 
-- [ ] Bug fix (non-breaking change that fixes an issue)
-- [ ] New feature (non-breaking change that adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
-- [ ] Documentation update
-- [ ] Refactoring (no functional changes)
+- [ ] バグ修正
+- [ ] 新機能
+- [ ] 破壊的変更
+- [ ] ドキュメント更新
+- [ ] リファクタリング
 
-## Changes Made
+## 変更内容
 
-- Change 1
-- Change 2
+- 変更1
+- 変更2
 
-## Testing
+## テスト
 
-- [ ] Unit tests pass
-- [ ] iOS build succeeds
-- [ ] Server build succeeds
-- [ ] Tested on simulator/device
+- [ ] ユニットテスト通過
+- [ ] iOS ビルド成功
+- [ ] Server ビルド成功
 
-## Checklist
+## チェックリスト
 
-- [ ] My code follows the project's style guidelines
-- [ ] I have performed a self-review of my code
-- [ ] I have commented my code where necessary
-- [ ] I have updated documentation if needed
-- [ ] My changes generate no new warnings
+- [ ] コードスタイルに準拠
+- [ ] セルフレビュー実施
+- [ ] 必要に応じてドキュメント更新
 
-## Related Issues
+## 関連 Issue
 
-Fixes #(issue number)
-
-## Screenshots (if applicable)
-
-| Before | After |
-|--------|-------|
-|        |       |
+Fixes #(issue番号)

@@ -1,35 +1,27 @@
-# Code of Conduct
+# 行動規範
 
-## Our Pledge
+## 基本方針
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+すべての参加者にとってハラスメントのない環境を提供します。
 
-## Our Standards
+## 推奨される行動
 
-Examples of behavior that contributes to a positive environment:
+- 歓迎的で包括的な言葉を使う
+- 異なる視点や経験を尊重する
+- 建設的な批判を受け入れる
+- コミュニティにとって最善なことに焦点を当てる
 
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints and experiences
-- Gracefully accepting constructive criticism
-- Focusing on what is best for the community
-- Showing empathy towards other community members
+## 禁止される行動
 
-Examples of unacceptable behavior:
+- 性的な言葉や画像の使用
+- 荒らし、侮辱的なコメント、個人攻撃
+- 公的または私的なハラスメント
+- 他者の個人情報の無断公開
 
-- The use of sexualized language or imagery and unwelcome sexual attention
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information without explicit permission
-- Other conduct which could reasonably be considered inappropriate
+## 執行
 
-## Enforcement
+不適切な行動はプロジェクトメンテナーが対処します。
 
-Project maintainers are responsible for clarifying and enforcing standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+## 帰属
 
-## Scope
-
-This Code of Conduct applies within all project spaces, and also applies when an individual is officially representing the project in public spaces.
-
-## Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/), version 2.1.
+この行動規範は [Contributor Covenant](https://www.contributor-covenant.org/) v2.1 を基にしています。

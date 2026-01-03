@@ -1,40 +1,40 @@
 ---
-name: Bug Report
-about: Report a bug to help us improve
+name: バグ報告
+about: バグを報告して改善に貢献
 title: '[Bug] '
 labels: bug
 assignees: ''
 ---
 
-## Description
+## 概要
 
-A clear and concise description of the bug.
+バグの簡潔な説明。
 
-## Steps to Reproduce
+## 再現手順
 
-1. Go to '...'
-2. Click on '...'
-3. See error
+1. '...' に移動
+2. '...' をクリック
+3. エラーが発生
 
-## Expected Behavior
+## 期待される動作
 
-What you expected to happen.
+期待していた動作。
 
-## Actual Behavior
+## 実際の動作
 
-What actually happened.
+実際に起きた動作。
 
-## Screenshots
+## 環境
 
-If applicable, add screenshots to help explain your problem.
+- **デバイス**: [例: iPhone 15 Pro, Simulator]
+- **iOS バージョン**: [例: 17.0]
+- **Xcode バージョン**: [例: 16.0]
+- **アプリバージョン**: [例: 1.0.0]
 
-## Environment
+## スクリーンショット
 
-- **Device**: [e.g., iPhone 15 Pro, Simulator]
-- **iOS Version**: [e.g., 17.0]
-- **Xcode Version**: [e.g., 16.0]
-- **App Version**: [e.g., 1.0.0]
+該当する場合は添付。
 
-## Additional Context
+## 補足
 
-Add any other context about the problem here.
+その他の情報。

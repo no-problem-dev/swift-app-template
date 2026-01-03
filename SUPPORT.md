@@ -1,43 +1,33 @@
-# Support
+# サポート
 
-## Documentation
+## ドキュメント
 
-- [README.md](README.md) - Setup and usage instructions
-- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
-- [docs/](docs/) - Additional documentation
+- [README.md](README.md) - セットアップと使用方法
+- [CONTRIBUTING.md](CONTRIBUTING.md) - コントリビューションガイド
+- [docs/](docs/) - 追加ドキュメント
 
-## Getting Help
+## ヘルプを得る
 
-### Issues
+### Issue
 
-For bugs and feature requests, please [open an issue](../../issues/new/choose) using the appropriate template.
+バグや機能リクエストは [Issue](../../issues/new/choose) を作成してください。
 
-### Discussions
+## よくある問題
 
-For questions, ideas, and general discussion, use [GitHub Discussions](../../discussions) if enabled.
+### ビルドエラー
 
-## Common Issues
+1. Xcode 16+ がインストールされているか確認
+2. `make setup` でプロジェクトファイルを再生成
+3. Xcode でクリーンビルド: `Cmd + Shift + K`
 
-### Build Errors
+### Firebase セットアップ
 
-1. Ensure Xcode 16+ is installed
-2. Run `make setup` to regenerate project files
-3. Clean build folder: `Cmd + Shift + K` in Xcode
+1. `GoogleService-Info.plist` が `iOS/App/` にあるか確認
+2. plist 追加後に `make xcode-generate` を実行
+3. Firebase Console でバンドル ID を確認
 
-### Firebase Setup
+### エミュレーター問題
 
-1. Verify `GoogleService-Info.plist` is in `iOS/App/`
-2. Run `make xcode-generate` after adding the plist
-3. Check Firebase Console for correct bundle ID
-
-### Emulator Issues
-
-1. Ensure Firebase CLI is installed: `npm install -g firebase-tools`
-2. Check emulator status: `make emulator-status`
-3. Kill stuck processes: `make kill-ports`
-
-## Resources
-
-- [Swift Documentation](https://swift.org/documentation/)
-- [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui)
-- [Firebase iOS Documentation](https://firebase.google.com/docs/ios/setup)
+1. Firebase CLI インストール確認: `npm install -g firebase-tools`
+2. エミュレーター状態確認: `make emulator-status`
+3. ポート解放: `make kill-ports`

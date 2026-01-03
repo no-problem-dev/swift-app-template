@@ -1,86 +1,51 @@
-# Contributing to Swift App Template
+# コントリビューションガイド
 
-Thank you for your interest in contributing! This document provides guidelines for contributing to this project.
+## 開発フロー
 
-## Getting Started
+1. リポジトリをフォーク
+2. ローカルにクローン
+3. [README.md](README.md) に従ってセットアップ
 
-1. Fork the repository
-2. Clone your fork locally
-3. Follow the setup instructions in [README.md](README.md)
+## ブランチ命名規則
 
-## Development Workflow
+- `feature/` - 新機能
+- `fix/` - バグ修正
+- `docs/` - ドキュメント更新
+- `refactor/` - リファクタリング
 
-### Branch Naming
+## コミットメッセージ
 
-- `feature/` - New features
-- `fix/` - Bug fixes
-- `docs/` - Documentation updates
-- `refactor/` - Code refactoring
-- `test/` - Test additions or fixes
-
-### Commit Messages
-
-Follow [Conventional Commits](https://www.conventionalcommits.org/):
+[Conventional Commits](https://www.conventionalcommits.org/) に従う:
 
 ```
-feat: add user authentication
-fix: resolve login timeout issue
-docs: update setup instructions
-refactor: simplify API client
-test: add unit tests for auth service
+feat: ユーザー認証を追加
+fix: ログインタイムアウトを修正
+docs: セットアップ手順を更新
 ```
 
-### Pull Request Process
+## プルリクエスト
 
-1. Create a feature branch from `main`
-2. Make your changes with clear, focused commits
-3. Ensure all tests pass
-4. Update documentation if needed
-5. Submit a pull request with a clear description
+1. `main` からブランチを作成
+2. 変更をコミット
+3. テストが通ることを確認
+4. PRを作成
 
-## Code Style
+## コードスタイル
 
-### Swift
+- [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/) に従う
+- Clean Architecture の原則を維持
+- `let` を `var` より優先
 
-- Follow [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
-- Use SwiftLint for consistent formatting
-- Prefer `let` over `var` when possible
-- Use meaningful variable and function names
-
-### Architecture
-
-- Follow Clean Architecture principles
-- Keep UI logic in Presentation layer
-- Business logic belongs in UseCases
-- Data access through Repository pattern
-
-## Testing
-
-- Write unit tests for new features
-- Maintain existing test coverage
-- Run tests before submitting PR:
+## テスト実行
 
 ```bash
-# iOS tests
+# iOS
 /ios-dev:ios-test
 
-# Server tests
+# Server
 make server-test
 ```
 
-## Reporting Issues
+## ライセンス
 
-When reporting issues, please include:
-
-- Clear description of the problem
-- Steps to reproduce
-- Expected vs actual behavior
-- Environment details (Xcode version, iOS version, etc.)
-
-## Questions?
-
-See [SUPPORT.md](SUPPORT.md) for how to get help.
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the MIT License.
+コントリビューションは MIT License の下でライセンスされます。

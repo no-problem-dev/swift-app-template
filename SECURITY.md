@@ -1,42 +1,35 @@
-# Security Policy
+# セキュリティポリシー
 
-## Supported Versions
+## サポートバージョン
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x.x   | :white_check_mark: |
+| バージョン | サポート状況 |
+| ---------- | ------------ |
+| 1.x.x      | ✅           |
 
-## Reporting a Vulnerability
+## 脆弱性の報告
 
-If you discover a security vulnerability, please report it responsibly:
+セキュリティ脆弱性を発見した場合:
 
-1. **Do not** open a public issue
-2. Email the maintainers directly or use GitHub's private vulnerability reporting feature
-3. Include detailed information about the vulnerability
-4. Allow reasonable time for a fix before public disclosure
+1. 公開 Issue を作成 **しないでください**
+2. GitHub の Private vulnerability reporting を使用
+3. 詳細情報を含めてください
+4. 修正まで公開を控えてください
 
-## Security Best Practices
+## セキュリティベストプラクティス
 
-When using this template:
+### Firebase 設定
 
-### Firebase Configuration
+- `GoogleService-Info.plist` を公開リポジトリにコミットしない
+- 本番環境では App Check を有効化
 
-- Never commit `GoogleService-Info.plist` to public repositories
-- Use environment variables for sensitive configuration
-- Enable App Check in production
+### API セキュリティ
 
-### API Security
+- すべての API エンドポイントは Firebase 認証必須
+- 本番環境では HTTPS を使用
+- サーバー側で入力を検証
 
-- All API endpoints require Firebase Authentication
-- Use HTTPS in production
-- Validate all user inputs server-side
+### シークレット管理
 
-### Secrets Management
-
-- Use `.env` files for local development (gitignored)
-- Use GitHub Secrets for CI/CD
-- Use Cloud Secret Manager for production
-
-## Dependencies
-
-We regularly update dependencies to address security vulnerabilities. Run `swift package update` periodically to get the latest security patches.
+- ローカル開発: `.env` ファイル (gitignore済み)
+- CI/CD: GitHub Secrets
+- 本番: Cloud Secret Manager
