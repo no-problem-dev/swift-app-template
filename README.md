@@ -18,11 +18,10 @@ gh repo create my-app --template no-problem-dev/swift-app-template --clone
 cd my-app
 ```
 
-### 2. 設定ファイルの準備
+### 2. 設定ファイルの生成
 
 ```bash
-cp setup.config.example setup.config
-cp .env.example .env
+make setup  # setup.config と .env を生成
 ```
 
 `setup.config` を編集:
