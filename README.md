@@ -18,16 +18,17 @@ gh repo create my-app --template no-problem-dev/swift-app-template --clone
 cd my-app
 ```
 
-### 2. 設定ファイルの編集
+### 2. 設定ファイルの準備
 
 ```bash
-make setup  # setup.config と .env を生成
+cp setup.config.example setup.config
+cp .env.example .env
 ```
 
 `setup.config` を編集:
 ```bash
 APP_NAME=MyApp
-APP_DISPLAY_NAME=My App
+APP_DISPLAY_NAME="My App"
 BUNDLE_ID_PREFIX=com.mycompany
 BUNDLE_ID=com.mycompany.myapp
 DEVELOPMENT_TEAM=XXXXXXXXXX
@@ -41,7 +42,7 @@ FIREBASE_PROJECT_ID=your-project-id
 ### 3. Firebase 設定
 
 1. [Firebase Console](https://console.firebase.google.com/) でプロジェクト作成
-2. iOS アプリを追加
+2. iOS アプリを追加（Bundle ID は setup.config の BUNDLE_ID と一致させる）
 3. `GoogleService-Info.plist` を `iOS/App/` に配置
 
 ### 4. プロジェクト生成
