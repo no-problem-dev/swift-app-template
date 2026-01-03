@@ -23,7 +23,7 @@ struct Dependencies: Sendable {
         let profileUseCase = ProfileUseCase(profileRepository: profileRepository)
 
         let services = AppServices(
-            auth: AuthService(profileUseCase: profileUseCase),
+            auth: AuthService(),
             profile: ProfileAPIServiceImpl(profileUseCase: profileUseCase),
             todos: TodosService(todoUseCase: todoUseCase),
             categories: CategoriesService(categoryUseCase: categoryUseCase)
