@@ -19,6 +19,9 @@ public struct AppRootView: View {
         initialMode: .system
     )
 
+    @State private var todoStore = TodoStore()
+    @State private var categoryStore = CategoryStore()
+
     public init(authenticationUseCase: AuthenticationUseCase) {
         self.authenticationUseCase = authenticationUseCase
     }
@@ -36,6 +39,8 @@ public struct AppRootView: View {
             },
             authenticated: {
                 MainTabView()
+                    .environment(\.todoStore, todoStore)
+                    .environment(\.categoryStore, categoryStore)
             }
         )
         .theme(themeProvider)

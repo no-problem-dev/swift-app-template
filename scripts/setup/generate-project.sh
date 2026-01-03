@@ -52,8 +52,6 @@ packages:
     path: Packages/Presentation
   UseCases:
     path: Packages/UseCases
-  Shared:
-    path: ../Shared
 
 targets:
   App:
@@ -65,7 +63,6 @@ targets:
     dependencies:
       - package: Presentation
       - package: UseCases
-      - package: Shared
     settings:
       base:
         INFOPLIST_FILE: App/Info.plist
