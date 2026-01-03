@@ -1,0 +1,24 @@
+# CODEOWNERS - Define code owners for automatic review requests
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything
+* @no-problem-dev
+
+# iOS specific
+/iOS/ @no-problem-dev
+
+# Backend specific
+/Backend/ @no-problem-dev
+
+# Shared models
+/Shared/ @no-problem-dev
+
+# CI/CD and infrastructure
+/.github/ @no-problem-dev
+/ci_scripts/ @no-problem-dev
+/firebase/ @no-problem-dev
+/scripts/ @no-problem-dev
+
+# Documentation
+*.md @no-problem-dev
+/docs/ @no-problem-dev

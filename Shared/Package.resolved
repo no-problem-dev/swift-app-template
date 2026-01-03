@@ -1,0 +1,24 @@
+{
+  "originHash" : "ca7481dc10ec85843483ab1d1deccc2c7a131b5d40fb6067718eb3174b69e54f",
+  "pins" : [
+    {
+      "identity" : "swift-api-contract",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/no-problem-dev/swift-api-contract.git",
+      "state" : {
+        "revision" : "de6513d7691518242ea98b3a33d6f24a50e09ef6",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "4799286537280063c85a32f09884cfbca301b1a1",
+        "version" : "602.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
