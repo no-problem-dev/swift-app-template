@@ -21,8 +21,10 @@ cd my-app
 ### 2. 設定ファイルの生成
 
 ```bash
-make setup  # setup.config と .env を生成
+make setup
 ```
+
+> **Note**: `make setup` は状態に応じて動作が変わります。初回は設定ファイルを生成し、設定完了後は Xcode プロジェクトを生成します。
 
 `setup.config` を編集:
 ```bash
