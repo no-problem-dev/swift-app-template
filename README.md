@@ -102,12 +102,11 @@ Xcode でシミュレータまたは実機で実行、または:
 ├── Backend/
 │   └── Sources/
 │       ├── Server/             # サーバーエントリポイント
-│       └── BackendServices/    # バックエンドサービス
+│       └── Services/           # バックエンドサービス
 │           ├── Configuration/  # 設定
 │           ├── Domain/         # リポジトリプロトコル
 │           ├── Infrastructure/ # Firestore 実装
-│           ├── UseCases/       # サービス層
-│           └── Server/         # ハンドラ・ルーティング
+│           └── UseCase/        # ユースケース
 ├── Shared/                     # 共有モデル
 │   └── Sources/Shared/
 │       ├── Entities/           # ドメインエンティティ
@@ -143,7 +142,7 @@ Xcode でシミュレータまたは実機で実行、または:
 2. `Shared/Sources/Shared/API/Contracts/` に API コントラクトを追加
 3. `iOS/Packages/UseCases/` に UseCase を追加
 4. `iOS/Packages/Presentation/Stores/` に Store を追加
-5. `Backend/Sources/BackendServices/` にリポジトリとサービスを追加
+5. `Backend/Sources/Services/` にリポジトリとサービスを追加
 
 ### テーマのカスタマイズ
 
