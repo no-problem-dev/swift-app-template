@@ -26,3 +26,5 @@
 
 [未リリース]: https://github.com/no-problem-dev/swift-app-template/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/no-problem-dev/swift-app-template/releases/tag/v1.0.0
+
+<!-- Auto-generated on 2026-01-03T07:36:06Z by release workflow -->
